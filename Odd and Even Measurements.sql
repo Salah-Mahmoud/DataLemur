@@ -8,7 +8,7 @@ WITH row_num_cte AS (
 classified_values_cte AS (
   SELECT
     measurement_day,
-    CASE 
+    CASE
       WHEN row_num % 2 = 1 THEN measurement_value
       ELSE NULL
     END AS odd,
